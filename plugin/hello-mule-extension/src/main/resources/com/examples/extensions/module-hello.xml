@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module name="Hello Smart Connector"
-        prefix="module-hello"
+<module name="Hello World"
+        prefix="hello-world"
         doc:description="This module relies in runtime provided components"
 
         xmlns="http://www.mulesoft.org/schema/mule/module"
