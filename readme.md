@@ -23,3 +23,6 @@ Adjust the prefix
            http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
            http://www.mulesoft.org/schema/mule/hello-world http://www.mulesoft.org/schema/mule/hello-world/current/mule-hello-world.xsd">
 ```
+
+Create SVG icon at /icon/icon.svg
+
