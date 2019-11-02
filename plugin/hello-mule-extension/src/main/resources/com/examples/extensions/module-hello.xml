@@ -11,9 +11,11 @@
            http://www.mulesoft.org/schema/mule/module http://www.mulesoft.org/schema/mule/module/current/mule-module.xsd
            http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
 
+    <property name="text" type="string" doc:description="Message" />
+    
     <operation name="say" doc:description="Say hello world!">
         <body>
-            <mule:set-payload value="Hello World!"/>
+            <mule:set-payload value="#[vars.text default 'Hello World']"/>
         </body>
         <output type="string" doc:description="Greetings"/>
     </operation>
