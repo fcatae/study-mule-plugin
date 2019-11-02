@@ -5,7 +5,7 @@
     <groupId>com.examples.extensions</groupId>
     <artifactId>module-hello</artifactId>
     <packaging>mule-extension</packaging>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
 
     <name>Hello World Connector</name>
     <description>A Mule extension done with pure Mule DSL to say Hello World!</description>
