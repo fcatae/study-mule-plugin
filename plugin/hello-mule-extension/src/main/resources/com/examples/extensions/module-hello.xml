@@ -18,4 +18,15 @@
         <output type="string" doc:description="Greetings"/>
     </operation>
 
+    <operation name="sum" doc:description="Sum numbers">
+        <parameters>
+            <parameter name="numA" type="number"/>
+            <parameter name="numB" type="number"/>
+        </parameters>
+        <body>
+            <mule:set-payload value="#[vars.numA+vars.numB]" />
+        </body>
+        <output type="number"/>
+    </operation>
+
  </module>
