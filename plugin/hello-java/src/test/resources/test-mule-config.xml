@@ -1,0 +1,19 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:hellojava="http://www.mulesoft.org/schema/mule/hellojava"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/hellojava http://www.mulesoft.org/schema/mule/hellojava/current/mule-hellojava.xsd">
+
+    <hellojava:config name="config" configId="configId">
+        <hellojava:connection requiredParameter="aValue" />
+    </hellojava:config>
+
+    <flow name="sayHiFlow">
+        <hellojava:say-hi person="Mariano Gonzalez"/>
+    </flow>
+
+    <flow name="retrieveInfoFlow">
+        <hellojava:retrieve-info config-ref="config"/>
+    </flow>
+
+</mule>
