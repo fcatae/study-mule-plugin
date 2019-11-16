@@ -13,19 +13,12 @@
            http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
            http://www.mulesoft.org/schema/mule/module-hello http://www.mulesoft.org/schema/mule/module-hello/current/mule-module-hello.xsd">
 
-    <operation name="set-payload-hardcoded" doc:description="Sets the payload to the String value 'Wubba Lubba Dub Dub'">
+    <operation name="set-payload-HELLO" doc:description="Sets the payload to the String value 'Wubba Lubba Dub Dub'">
         <body>
             <mule:set-payload value="Wubba Lubba Dub Dub"/>
         </body>
         <output type="string" doc:description="Payload's output"/>
     </operation>
 
-    <operation name="set-payload-hardcoded-two-times" doc:description="Sets the payload to the String value 'Wubba Lubba Dub Dub Dub Dub' (uses references to local operation)">
-        <body>
-            <tns:set-payload-hardcoded/>
-            <mule:set-payload value="#[payload ++ ' Dub Dub']"/>
-        </body>
-        <output type="string" doc:description="Payload's output"/>
-    </operation>
 
  </module>
