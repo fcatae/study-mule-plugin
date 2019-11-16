@@ -7,7 +7,7 @@ mvn archetype:generate -DarchetypeGroupId=org.mule.extensions -DarchetypeArtifac
 Differences:
 - `<packaging>mule-extension</packaging>` instead of `<packaging>mule-application</packaging>`
 
-- Project dependency:
+- Project dependency: (scope provided)
 
 ```
 <dependency>
