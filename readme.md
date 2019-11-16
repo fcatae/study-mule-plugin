@@ -4,6 +4,33 @@ Run the command line:
 mvn archetype:generate -DarchetypeGroupId=org.mule.extensions -DarchetypeArtifactId=mule-extensions-xml-archetype -DarchetypeVersion=1.2.0 -DgroupId=org.mule.extension -DartifactId=hello-mule-extension -DmuleConnectorName=Hello
 ```
 
+Differences:
+- `<packaging>mule-extension</packaging>` instead of `<packaging>mule-application</packaging>`
+
+- Project dependency:
+
+```
+<dependency>
+    <groupId>org.mule.runtime</groupId>
+    <artifactId>mule-module-extensions-xml-support</artifactId>
+    <version>${mule.version}</version>
+    <scope>provided</scope>
+</dependency>
+```
+
+- Build plugin:
+
+```
+<plugin>
+    <groupId>org.mule.runtime.plugins</groupId>
+    <artifactId>mule-extensions-maven-plugin</artifactId>
+    <version>${mule.extensions.maven.plugin.version}</version>
+    <extensions>true</extensions>
+</plugin>
+```
+
+# XML Module #
+
 File must be named "module-"
 
 Adjust the prefix
