@@ -10,6 +10,6 @@ http://www.mulesoft.org/schema/mule/module-mulexml-plugin http://www.mulesoft.or
 	</http:listener-config>
 	<flow name="app-muleFlow" doc:id="c1a400d1-15a1-4bb0-8849-5bc8d2aaf7b3" >
 		<http:listener doc:name="Listener" doc:id="b6654896-0adb-4f33-98c0-9e8fb05c6750" config-ref="HTTP_Listener_config" path="/*"/>
-		<module-mulexml-plugin:set-payload-hardcoded doc:name="Set payload hardcoded" doc:id="79671baa-c491-4464-b08e-dc246223b94c" />
+		<module-mulexml-plugin:say-good-morning doc:name="Say good morning" doc:id="8fe0c6a3-95e7-484f-ad17-ae88d1b4edf0" />
 	</flow>
 </mule>
