@@ -44,6 +44,8 @@ Solution:
     </pluginRepositories>
 ```
 
+The module file must be named "module-" (automatically by the scaffold).
+
 
 # Comparing to a standard Mule App
 
@@ -118,9 +120,7 @@ Create a test flow:
 </mule>
 ```
 
-# XML Module #
-
-File must be named "module-"
+# Icon #
 
 Create SVG icon at /icon/icon.svg
 
