@@ -1,3 +1,5 @@
+# Quick Start
+
 Run the command line:
 
 ```
@@ -19,6 +21,31 @@ version: 1.0.0-SNAPSHOT
 package: org.mule-examples.mulexml-plugin
 extensionName: MuleXML Plugin
 ```
+
+The project contains:
+1. Many references to MUnit
+2. No repository configured
+
+Solution:
+1. Remove all references to MUnit (dependency and pluginManagement)
+2. Configure a Plugin Repository
+
+```xml
+    <pluginRepositories>
+        <pluginRepository>
+            <id>mulesoft-releases</id>
+            <name>mulesoft release repository</name>
+            <layout>default</layout>
+            <url>https://repository.mulesoft.org/releases/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+```
+
+
+# Comparing to a standard Mule App
 
 Differences:
 - `<packaging>mule-extension</packaging>` instead of `<packaging>mule-application</packaging>`
