@@ -10,11 +10,11 @@ public class BasicTestCase extends MuleArtifactFunctionalTestCase {
 		return "test-mule-config.xml";
 	}
 	
-	//@Test
+	@Test
 	public void sayHi() throws Exception {
-		//Event event = this.flowRunner("testeFlow1").run();
-		//String payload = event.getMessage().getPayload().getValue().toString();
-		//System.out.println("HEY: " + payload);
+		Event event = this.flowRunner("testeFlow1").run();
+		String payload = event.getMessage().getPayload().getValue().toString();
+		System.out.println("HEY: " + payload);
 	}
 	
 	@Test

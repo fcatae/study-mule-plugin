@@ -11,7 +11,11 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<logger level="INFO" doc:name="Logger" doc:id="8399f02e-9898-4d79-ac18-f2dd8a8dd52f" message="YEAAAH"/>
 		<ee:transform doc:name="Transform Message" doc:id="6deb2f40-bfef-488c-b65e-9ecdb863b3c0" >
 			<ee:message >
-				<ee:set-payload />
+				<ee:set-payload ><![CDATA[output application/csv
+---
+{
+	"a": 1
+}]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
 	</flow>
