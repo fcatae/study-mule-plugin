@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:tns="http://www.mulesoft.org/schema/mule/module-smart"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/module-smart http://www.mulesoft.org/schema/mule/module-smart/current/mule-module-smart.xsd
+	">
 	<flow name="testFlow" doc:id="3200c4a9-9bf1-4668-b9ef-d33affd9a7ef" >
+		<set-payload value="payload" doc:name="Set Payload" doc:id="5a9686ac-6dd6-4cea-8cc6-f550e459a01a" />
 		<logger level="INFO" doc:name="Logger" doc:id="2ebf9277-9b42-4918-8b8b-f5724cb274c2" message="YEAH"/>
 	</flow>
 </mule>
