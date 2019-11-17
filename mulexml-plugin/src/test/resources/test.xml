@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:module-mulexml-plugin="http://www.mulesoft.org/schema/mule/module-mulexml-plugin" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/module-mulexml-plugin http://www.mulesoft.org/schema/mule/module-mulexml-plugin/current/mule-module-mulexml-plugin.xsd">
+
 	<flow name="testFlow" doc:id="be22e64e-91d2-4088-bd7f-a35dec619a64" >
-		<set-payload value="Hi" doc:name="Set Payload" doc:id="6f55094e-732a-4b7c-82cc-08ab5593c772" />
+				<module-mulexml-plugin:say-good-morning doc:name="Say good morning" />
 	</flow>
 </mule>
