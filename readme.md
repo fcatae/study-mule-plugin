@@ -99,27 +99,28 @@ Add the repository:
     </repositories>
 ```
 
+# Test Flow #
+
+Create a test flow:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:module-mulexml-plugin="http://www.mulesoft.org/schema/mule/module-mulexml-plugin" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/module-mulexml-plugin http://www.mulesoft.org/schema/mule/module-mulexml-plugin/current/mule-module-mulexml-plugin.xsd">
+
+	<flow name="testFlow">
+		<module-mulexml-plugin:say-good-morning doc:name="Say good morning" />
+	</flow>
+</mule>
+```
+
 # XML Module #
 
 File must be named "module-"
-
-Adjust the prefix
-
-```
-<module name="Hello World"
-        prefix="hello-world"
-        doc:description="This module relies in runtime provided components"
-
-        xmlns="http://www.mulesoft.org/schema/mule/module"
-        xmlns:mule="http://www.mulesoft.org/schema/mule/core"
-        xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
-        xmlns:tns="http://www.mulesoft.org/schema/mule/hello-world"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="
-           http://www.mulesoft.org/schema/mule/module http://www.mulesoft.org/schema/mule/module/current/mule-module.xsd
-           http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
-           http://www.mulesoft.org/schema/mule/hello-world http://www.mulesoft.org/schema/mule/hello-world/current/mule-hello-world.xsd">
-```
 
 Create SVG icon at /icon/icon.svg
 

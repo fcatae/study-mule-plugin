@@ -6,7 +6,7 @@
 	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 		http://www.mulesoft.org/schema/mule/module-mulexml-plugin http://www.mulesoft.org/schema/mule/module-mulexml-plugin/current/mule-module-mulexml-plugin.xsd">
 
-	<flow name="testFlow" doc:id="be22e64e-91d2-4088-bd7f-a35dec619a64" >
-				<module-mulexml-plugin:say-good-morning doc:name="Say good morning" />
+	<flow name="testFlow">
+		<module-mulexml-plugin:say-good-morning doc:name="Say good morning" />
 	</flow>
 </mule>
