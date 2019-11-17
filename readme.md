@@ -72,6 +72,33 @@ Differences:
 </plugin>
 ```
 
+# Configure Manual Tests #
+
+Configure the parent:
+
+```
+    <parent>
+        <groupId>org.mule.extensions</groupId>
+        <artifactId>mule-modules-parent</artifactId>
+        <version>1.1.3</version>
+    </parent>
+```
+
+It will indiretly add reference to Functional Tests (org.mule.tests.mule-tests-functional).
+
+Add the repository:
+
+```
+	<repositories>
+        <repository>
+            <id>mulesoft-releases</id>
+            <name>MuleSoft Releases Repository</name>
+            <url>https://repository.mulesoft.org/releases/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+```
+
 # XML Module #
 
 File must be named "module-"
