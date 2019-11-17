@@ -1,10 +1,16 @@
-package com.teste;
+package org.mule.extension.hellojava;
 import org.junit.Test;
 import org.mule.functional.junit4.*;
 import org.mule.runtime.api.event.Event;
 
-public class BasicTestCase extends ArtifactFunctionalTestCase {
+public class BasicTestCase extends MuleArtifactFunctionalTestCase {
 
+	private String a = null;
+	
+	public BasicTestCase() {
+		a.toCharArray();
+	}
+	
 	@Override
 	protected String getConfigFile() {
 		return "test-mule-config.xml";
