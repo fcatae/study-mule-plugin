@@ -8,7 +8,6 @@ Simplified:
 
 ```
 mvn archetype:generate -DarchetypeGroupId=org.mule.extensions -DarchetypeArtifactId=mule-extensions-xml-archetype
-
 ```
 
 Differences:
