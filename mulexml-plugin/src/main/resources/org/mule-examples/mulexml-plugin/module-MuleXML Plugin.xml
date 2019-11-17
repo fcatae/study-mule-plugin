@@ -22,7 +22,7 @@
 
     <operation name="say-greetings" doc:description="Sets the payload to 'Good Morning, my friend' (uses references to local operation)">
         <body>
-            <tns:set-payload-hardcoded/>
+            <tns:say-good-morning/>
             <mule:set-payload value="#[payload ++ ', my friend']"/>
         </body>
         <output type="string" doc:description="Payload's output"/>
