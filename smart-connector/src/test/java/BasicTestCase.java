@@ -13,5 +13,6 @@ public class BasicTestCase extends MuleArtifactFunctionalTestCase {
 	public void validate() throws Exception {
 		Event event = flowRunner("testFlow").run();
 		String result = event.getMessage().getPayload().getValue().toString();
+		System.out.println("YEAH: " + result);
 	}
 }
