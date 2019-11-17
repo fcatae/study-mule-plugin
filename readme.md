@@ -1,13 +1,23 @@
 Run the command line:
 
 ```
-mvn archetype:generate -DarchetypeGroupId=org.mule.extensions -DarchetypeArtifactId=mule-extensions-xml-archetype -DarchetypeVersion=1.2.0 -DgroupId=org.mule.extension -DartifactId=hello-mule-extension -DmuleConnectorName=Hello
-```
-
-Simplified:
-
-```
 mvn archetype:generate -DarchetypeGroupId=org.mule.extensions -DarchetypeArtifactId=mule-extensions-xml-archetype
+```
+
+Fill out the parameters. For example:
+
+```
+Define value for property 'groupId' org.mule.extensions.smart.connector: : org.mule-examples
+Define value for property 'artifactId' hello-smart-connector: : mulexml-plugin
+Define value for property 'version' 1.0.0-SNAPSHOT: : 
+Define value for property 'package' org.mule.extensions.smart.connector: : org.mule-examples.mulexml-plugin
+Define value for property 'extensionName' Hello: : MuleXML Plugin
+Confirm properties configuration:
+groupId: org.mule-examples
+artifactId: mulexml-plugin
+version: 1.0.0-SNAPSHOT
+package: org.mule-examples.mulexml-plugin
+extensionName: MuleXML Plugin
 ```
 
 Differences:
