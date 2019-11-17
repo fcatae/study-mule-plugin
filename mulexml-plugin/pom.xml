@@ -8,7 +8,7 @@
     <version>2.0.0-SNAPSHOT</version>
 
     <name>Mule XML</name>
-    <description>A Mule extension done with pure Mule DSL that depends in the runtime operations (set-payload, set-variable, etc.)</description>
+    <description>A Mule extension for waking up</description>
 
 
     <properties>
