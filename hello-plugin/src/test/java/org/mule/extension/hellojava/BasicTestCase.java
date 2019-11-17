@@ -5,12 +5,6 @@ import org.mule.runtime.api.event.Event;
 
 public class BasicTestCase extends MuleArtifactFunctionalTestCase {
 
-	private String a = null;
-	
-	public BasicTestCase() {
-		a.toCharArray();
-	}
-	
 	@Override
 	protected String getConfigFile() {
 		return "test-mule-config.xml";
