@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns:module-mulexml-plugin="http://www.mulesoft.org/schema/mule/module-mulexml-plugin" xmlns:http="http://www.mulesoft.org/schema/mule/http"
-	xmlns="http://www.mulesoft.org/schema/mule/core"
-	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+<mule xmlns:api-gateway="http://www.mulesoft.org/schema/mule/api-gateway" xmlns:module-mulexml-plugin="http://www.mulesoft.org/schema/mule/module-mulexml-plugin"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
-http://www.mulesoft.org/schema/mule/module-mulexml-plugin http://www.mulesoft.org/schema/mule/module-mulexml-plugin/current/mule-module-mulexml-plugin.xsd">
+http://www.mulesoft.org/schema/mule/module-mulexml-plugin http://www.mulesoft.org/schema/mule/module-mulexml-plugin/current/mule-module-mulexml-plugin.xsd
+http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd">
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="7cf1cfbc-130b-4e1d-856d-ff8adb76212b" >
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
+	<api-gateway:autodiscovery apiId="1" doc:name="API Autodiscovery" doc:id="e7bc6198-ca4a-4f6e-93f7-724cd5b14d5f" flowRef="app-muleFlow" />
+	<configuration-properties doc:name="Configuration properties" doc:id="56a3021e-9b81-443e-b1b6-f7aed8904f88" file="config.properties" />
 	<flow name="app-muleFlow" doc:id="c1a400d1-15a1-4bb0-8849-5bc8d2aaf7b3" >
-		<http:listener doc:name="Listener" doc:id="b6654896-0adb-4f33-98c0-9e8fb05c6750" config-ref="HTTP_Listener_config" path="/*"/>
+		<http:listener doc:name="Listener" doc:id="b6654896-0adb-4f33-98c0-9e8fb05c6750" config-ref="HTTP_Listener_config" path="/ping"/>
 		<module-mulexml-plugin:say-good-morning doc:name="Say good morning" doc:id="8fe0c6a3-95e7-484f-ad17-ae88d1b4edf0" />
 	</flow>
 </mule>
